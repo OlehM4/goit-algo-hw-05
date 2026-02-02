@@ -4,8 +4,8 @@ def input_error(func):
             return func(*args, **kwargs)
         except ValueError:
             return "Give me name and phone please."
-        except IndexError as e:
-            return e
+        except IndexError:
+            return "list index out of range"
         except KeyError:
             return "Contact not defined!"
     return inner

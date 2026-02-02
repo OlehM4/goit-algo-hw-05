@@ -1,7 +1,7 @@
 from typing import Callable
 
 def generator_numbers(text: str):
-    for char in text.split():
+    for char in text.split()[1:-1]:
         try:
             yield float(char.strip()) 
         except ValueError:
